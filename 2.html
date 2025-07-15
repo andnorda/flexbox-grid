@@ -1,0 +1,54 @@
+<meta charset="utf-8" />
+
+<style>
+  body {
+    display: flex;
+  }
+  .wrapper {
+    position: relative;
+    margin: auto;
+    width: 14em;
+  }
+  .blinds {
+    margin: auto;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  .caption {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: max-content;
+    transform: translateX(-50%);
+    color: white;
+    font-family: Impact;
+    font-size: 2em;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.03em black;
+  }
+</style>
+
+<div class="wrapper">
+  <video
+    class="blinds"
+    src="./blinds.mov"
+    autoplay
+    loop
+    muted
+    playsinline
+  ></video>
+  <div class="caption">CSS</div>
+</div>
+
+<script>
+  window.slideChanges = [
+    {
+      forward: () =>
+        (document.querySelector(".caption").innerHTML = "VIBE CODING"),
+      backward: () => (document.querySelector(".caption").innerHTML = "CSS"),
+    },
+  ];
+</script>
+
+<script type="module" src="./slide.js"></script>

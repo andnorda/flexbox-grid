@@ -1,0 +1,81 @@
+<meta charset="utf-8" />
+
+<style>
+  html {
+    font-family: sans-serif;
+  }
+
+  .chip {
+    border-radius: 9999px;
+    background-color: #006eb71c;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid #005a923f;
+    min-height: 2rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #0060a028;
+      border-color: #457c9d;
+    }
+
+    &[data-active="true"] {
+      background-color: #156389;
+      color: #fff;
+      border-color: transparent;
+
+      &:hover {
+        background-color: #246b91;
+      }
+    }
+  }
+
+  .flexbox {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .grid {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(8rem, auto));
+  }
+</style>
+
+<h2>Flexbox</h2>
+<div class="flexbox">
+  <button class="chip" data-active="true">Alle (90)</button>
+  <button class="chip">Brukerinnsikt (3)</button>
+  <button class="chip">Frontend (4)</button>
+  <button class="chip">Innholdsarbeid (5)</button>
+  <button class="chip">Skjema (6)</button>
+  <button class="chip">Testing (11)</button>
+  <button class="chip">Tilgjengelighetserklæring (4)</button>
+  <button class="chip">UU i Nav (10)</button>
+  <button class="chip">WCAG (48)</button>
+</div>
+
+<h2>Grid</h2>
+<div class="grid">
+  <button class="chip" data-active="true">Alle (90)</button>
+  <button class="chip">Brukerinnsikt (3)</button>
+  <button class="chip">Frontend (4)</button>
+  <button class="chip">Innholdsarbeid (5)</button>
+  <button class="chip">Skjema (6)</button>
+  <button class="chip">Testing (11)</button>
+  <button class="chip">Tilgjengelighetserklæring (4)</button>
+  <button class="chip">UU i Nav (10)</button>
+  <button class="chip">WCAG (48)</button>
+</div>
+
+<script>
+  document.querySelectorAll(".chip").forEach((button) => {
+    button.addEventListener("click", () => {
+      button.parentElement.querySelectorAll(".chip").forEach((btn) => {
+        btn.setAttribute("data-active", "false");
+      });
+      button.setAttribute("data-active", "true");
+    });
+  });
+</script>
+<script type="module" src="./slide.js"></script>
