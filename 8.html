@@ -5,7 +5,11 @@
     font-family: sans-serif;
   }
 
-  .rocket {
+  body {
+    margin: 30px;
+  }
+
+  .icon {
     border-radius: 0.25em;
     padding: 0.2em;
     font-size: 1.75rem;
@@ -30,24 +34,31 @@
 
   .flexbox {
     display: flex;
-    gap: 1rem;
+    column-gap: 1rem;
+    row-gap: 0.75rem;
 
-    svg {
-      flex-shrink: 0;
+    flex-wrap: wrap;
+
+    > div {
+      flex: 128px;
     }
   }
 
   .grid {
     display: grid;
-    gap: 1rem;
-    grid-template-columns: auto 1fr;
+    column-gap: 1rem;
+    row-gap: 0.75rem;
+
+    @media (min-width: 200px) {
+      grid-template-columns: auto 1fr;
+    }
   }
 </style>
 
 <h2>Flexbox</h2>
 <div class="flexbox media-object">
   <svg
-    class="rocket"
+    class="icon"
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"
@@ -73,7 +84,7 @@
 <h2>Grid</h2>
 <div class="grid media-object">
   <svg
-    class="rocket"
+    class="icon"
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"
