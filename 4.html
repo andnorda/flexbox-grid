@@ -1,15 +1,58 @@
 <meta charset="utf-8" />
 
 <style>
-  body {
-    display: flex;
+  .flexbox > *,
+  .grid > * {
+    border: 2px solid hotpink;
   }
 
-  h1 {
-    margin: auto;
+  .flexbox {
+  }
+
+  .grid {
   }
 </style>
 
-<h1>Flexbox for 1D, grid for 2D</h1>
+<h2>Flexbox</h2>
+<div class="flexbox">
+  <div>flex-direction</div>
+  <div>grid-auto-flow</div>
+  <div>gap</div>
+  <div>align-items</div>
+  <div>justify-content</div>
+  <div>grid-template-columns</div>
+  <div>
+    <a href="https://tailwindcss.com/docs/grid-template-columns" target="_blank"
+      >repeat(3, minmax(0, 1fr))</a
+    >
+  </div>
+  <div>repeat(auto-fit, minmax(16ch, 1fr))</div>
+  <div>flex-wrap</div>
+  <div>> * { flex: 1 }</div>
+</div>
+
+<h2>Grid</h2>
+<div class="grid grid-cols-4">
+  <div>flex-direction</div>
+  <div>grid-auto-flow</div>
+  <div>gap</div>
+  <div>align-items</div>
+  <div>justify-content</div>
+  <div>grid-template-columns</div>
+  <div>
+    <a href="https://tailwindcss.com/docs/grid-template-columns" target="_blank"
+      >repeat(3, minmax(0, 1fr))</a
+    >
+  </div>
+  <div>repeat(auto-fit, minmax(16ch, 1fr))</div>
+  <div>flex-wrap</div>
+  <div>> * { flex: 1 }</div>
+</div>
 
 <script type="module" src="./slide.js"></script>
+
+<style>
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+</style>

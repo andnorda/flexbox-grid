@@ -9,6 +9,36 @@
   body {
     height: 100%;
     margin: 0;
+    grid-template-rows: 100px repeat(2, auto) 1fr 100px;
+    display: grid;
+  }
+
+  aside {
+    align-self: start;
+  }
+
+  @media screen and (min-width: 600px) {
+    body {
+      grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+      grid-template-rows: 100px 1fr 100px;
+      grid-template-columns: 100px 1fr 100px;
+    }
+    header {
+      grid-area: header;
+    }
+    footer {
+      grid-area: footer;
+    }
+    nav {
+      grid-area: nav;
+    }
+    aside {
+      grid-area: aside;
+      align-self: initial;
+    }
   }
 
   header,
@@ -25,7 +55,6 @@
     background-color: #ffcdcd;
   }
 </style>
-
 <body>
   <header>Header</header>
   <nav>
