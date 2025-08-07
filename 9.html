@@ -1,37 +1,48 @@
 <meta charset="utf-8" />
 
 <style>
-  html {
-    font-family: sans-serif;
-  }
+  @layer base {
+    html {
+      font-family: sans-serif;
+    }
 
-  .icon {
-    border-radius: 0.25em;
-    padding: 0.2em;
-    font-size: 1.75rem;
-    color: var(--color);
-    box-shadow: color-mix(in srgb, var(--color) 35%, transparent) 0 0 0 1px,
-      color-mix(in srgb, var(--color) 30%, transparent) 0 20px 25px -5px,
-      color-mix(in srgb, var(--color) 30%, transparent) 0 8px 10px -6px;
-    background: linear-gradient(
-      to bottom right,
-      color-mix(in srgb, var(--color) 25%, white),
-      color-mix(in srgb, var(--color) 50%, white)
-    );
-  }
+    .icon {
+      border-radius: 0.25em;
+      padding: 0.2em;
+      font-size: 1.75rem;
+      color: var(--color);
+      box-shadow: color-mix(in srgb, var(--color) 35%, transparent) 0 0 0 1px,
+        color-mix(in srgb, var(--color) 30%, transparent) 0 20px 25px -5px,
+        color-mix(in srgb, var(--color) 30%, transparent) 0 8px 10px -6px;
+      background: linear-gradient(
+        to bottom right,
+        color-mix(in srgb, var(--color) 25%, white),
+        color-mix(in srgb, var(--color) 50%, white)
+      );
+    }
 
-  h3 {
-    margin-block: 0;
-  }
+    h3 {
+      margin-block: 0;
+    }
 
-  p {
-    margin-block: 0.5em 0;
+    p {
+      margin-block: 0.5em 0;
+    }
   }
 
   .flexbox {
+    display: flex;
+    gap: 1rem;
+
+    > svg {
+      flex-shrink: 0;
+    }
   }
 
   .grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto 1fr;
   }
 </style>
 

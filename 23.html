@@ -2,27 +2,50 @@
 <script type="module" src="./slide.js"></script>
 
 <style>
-  html {
-    height: 100%;
+  @layer base {
+    html {
+      height: 100%;
+    }
+
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    header,
+    footer {
+      background-color: #84cbff;
+    }
+
+    nav,
+    aside {
+      background-color: #cd9acd;
+    }
+
+    main {
+      background-color: #ffcdcd;
+    }
   }
 
   body {
-    height: 100%;
-    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
-  header,
-  footer {
-    background-color: #84cbff;
+  footer,
+  header {
+    width: 100%;
+    height: 100px;
+  }
+
+  main {
+    flex: 1;
   }
 
   nav,
   aside {
-    background-color: #cd9acd;
-  }
-
-  main {
-    background-color: #ffcdcd;
+    flex-basis: 100px;
   }
 </style>
 
@@ -36,7 +59,9 @@
     <a href="/5">Item 5</a>
   </nav>
   <main>
-    <h1>Content</h1>
+    <h1>
+      ContenContentContentContentContentContentContentContentContentContentContentt
+    </h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

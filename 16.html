@@ -1,38 +1,46 @@
 <meta charset="utf-8" />
 
 <style>
-  html {
-    font-family: sans-serif;
-  }
-
-  .chip {
-    border-radius: 9999px;
-    background-color: #006eb71c;
-    padding: 0.25rem 0.75rem;
-    border: 1px solid #005a923f;
-    min-height: 2rem;
-    cursor: pointer;
-
-    &:hover {
-      background-color: #0060a028;
-      border-color: #457c9d;
+  @layer base {
+    html {
+      font-family: sans-serif;
     }
 
-    &[data-active="true"] {
-      background-color: #156389;
-      color: #fff;
-      border-color: transparent;
+    .chip {
+      border-radius: 9999px;
+      background-color: #006eb71c;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid #005a923f;
+      min-height: 2rem;
+      cursor: pointer;
 
       &:hover {
-        background-color: #246b91;
+        background-color: #0060a028;
+        border-color: #457c9d;
+      }
+
+      &[data-active="true"] {
+        background-color: #156389;
+        color: #fff;
+        border-color: transparent;
+
+        &:hover {
+          background-color: #246b91;
+        }
       }
     }
   }
 
   .flexbox {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
   }
 
   .grid {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
   }
 </style>
 

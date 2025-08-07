@@ -2,32 +2,59 @@
 <script type="module" src="./slide.js"></script>
 
 <style>
-  html {
-    height: 100%;
+  @layer base {
+    html {
+      height: 100%;
+    }
+
+    body {
+      min-height: 100%;
+      margin: 0;
+    }
+
+    header,
+    footer {
+      background-color: #84cbff;
+    }
+
+    nav,
+    aside {
+      background-color: #cd9acd;
+    }
+
+    main {
+      background-color: #ffcdcd;
+    }
   }
 
   body {
-    height: 100%;
-    margin: 0;
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "nav main aside"
+      "footer footer footer";
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 100px minmax(0, 1fr) 100px;
   }
 
-  header,
-  footer {
-    background-color: #84cbff;
+  header {
+    grid-area: header;
   }
-
-  nav,
-  aside {
-    background-color: #cd9acd;
+  nav {
+    grid-area: nav;
   }
-
   main {
-    background-color: #ffcdcd;
+    grid-area: main;
+  }
+  aside {
+    grid-area: aside;
+  }
+  footer {
+    grid-area: footer;
   }
 </style>
 
 <body>
-  <header>Header</header>
   <nav>
     <a href="/1">Item 1</a>
     <a href="/2">Item 2</a>
@@ -35,8 +62,11 @@
     <a href="/4">Item 4</a>
     <a href="/5">Item 5</a>
   </nav>
+  <header>Header</header>
   <main>
-    <h1>Content</h1>
+    <h1>
+      ContenContentContentContentContentContentContentContentContentContentt
+    </h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

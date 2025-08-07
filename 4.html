@@ -7,9 +7,18 @@
   }
 
   .flexbox {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
   .grid {
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(16ch, 1fr));
   }
 </style>
 
