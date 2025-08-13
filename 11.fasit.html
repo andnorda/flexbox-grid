@@ -37,9 +37,20 @@
   }
 
   .flexbox {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    > * {
+      flex: 1;
+      flex-basis: 22ch;
+    }
   }
 
   .grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(22ch, 1fr));
   }
 </style>
 

@@ -1,18 +1,12 @@
 <meta charset="utf-8" />
+<link rel="stylesheet" href="./slide.css" />
 
 <style>
   html {
-    height: 100%;
     font-family: Impact;
-  }
-  body {
-    height: 100%;
-    margin: 0;
-    display: flex;
   }
   .wrapper {
     position: relative;
-    margin: auto;
     width: 26em;
   }
   .blinds {
@@ -49,8 +43,14 @@
   window.slideChanges = [
     {
       forward: () =>
-        (document.querySelector(".caption").innerHTML = "VIBE CODING"),
+        (document.querySelector(".caption").innerHTML = "Vibe coding"),
       backward: () => (document.querySelector(".caption").innerHTML = "CSS"),
+    },
+    {
+      forward: () =>
+        (document.querySelector(".caption").innerHTML = "Vibe coding CSS"),
+      backward: () =>
+        (document.querySelector(".caption").innerHTML = "Vibe coding"),
     },
   ];
 </script>
