@@ -9,43 +9,34 @@
     margin: 20px;
     height: 100%;
   }
-  form > * + * {
-    margin-top: 1rem;
-  }
-  label {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  input {
-    font: inherit;
-    max-width: 100%;
-  }
-  .post {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+  form {
+    display: grid;
   }
 </style>
 
 <form>
-  <div class="field">
-    <label for="phone">Telefonnummer</label>
-    <input type="text" id="phone" size="8" />
-  </div>
-  <div class="field">
-    <label for="fnr">Fødselsnummer</label>
-    <input type="text" id="fnr" size="11" />
-  </div>
-  <div class="post">
-    <div class="field">
-      <label for="postnr">Postnummer</label>
-      <input type="text" id="postnr" size="4" />
-    </div>
-    <div class="field">
-      <label for="poststed">Poststed</label>
-      <input type="text" id="poststed" />
-    </div>
-  </div>
+  <input type="button" />
+  <input type="checkbox" />
+  <input type="color" />
+  <input type="date" />
+  <input type="datetime-local" />
+  <input type="email" />
+  <input type="file" />
+  <input type="hidden" />
+  <input type="image" />
+  <input type="month" />
+  <input type="number" />
+  <input type="password" />
+  <input type="radio" />
+  <input type="range" />
+  <input type="reset" />
+  <input type="search" />
+  <input type="submit" />
+  <input type="tel" />
+  <input type="text" />
+  <input type="time" />
+  <input type="url" />
+  <input type="week" />
 </form>
 
 <script type="module" src="./slide.js"></script>

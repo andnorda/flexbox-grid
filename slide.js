@@ -18,7 +18,7 @@ window.addEventListener("keydown", (e) => {
       change.forward();
       state++;
     } else {
-      window.location.href = current + 1;
+      window.location.href = `${current + 1}.html`;
     }
   } else if (backwardKeys.includes(e.key)) {
     let change = window.slideChanges?.[state - 1];
@@ -27,7 +27,7 @@ window.addEventListener("keydown", (e) => {
       state--;
     } else {
       const url = new URL(window.location);
-      url.pathname = Math.max(current - 1, 0);
+      url.pathname = `${Math.max(current - 1, 0)}.html`;
       url.search = "back";
       window.location.href = url.toString();
     }

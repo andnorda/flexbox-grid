@@ -1,8 +1,138 @@
 <meta charset="utf-8" />
-<link rel="stylesheet" href="./slide.css" />
+<!-- <link rel="stylesheet" href="./slide.css" /> -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+  rel="stylesheet"
+/>
 
-<h1>
-  <a href="https://www.nav.no/dekoratoren" target="_blank">Footer links </a>
-</h1>
+<style>
+  @layer base {
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans";
+      --action-color: #005797;
+    }
+
+    header {
+      padding-top: 2rem;
+      border-bottom: solid 1px #bdbdbd;
+    }
+
+    nav {
+      box-sizing: content-box;
+      margin-inline: auto;
+      padding-inline: 5vw;
+      max-width: 70rem;
+
+      > * {
+        min-height: 50px;
+      }
+    }
+
+    button {
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 1rem;
+      background: none;
+      border: none;
+    }
+
+    button::after {
+      content: "";
+      border-style: solid;
+      border-width: 0 0.125rem 0.125rem 0;
+      block-size: 0.5rem;
+      inline-size: 0.5rem;
+      margin-top: -0.2rem;
+      transform: rotate(45deg);
+    }
+
+    .search {
+      aspect-ratio: 1 / 1;
+      display: flex;
+
+      img {
+        margin: auto;
+        height: 1em;
+        width: 1em;
+      }
+    }
+
+    .login {
+      color: var(--action-color);
+      text-decoration: none;
+      text-align: end;
+
+      img {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 100%;
+        border: solid 1px var(--action-color);
+      }
+    }
+
+    nav > :not(.logo-link) {
+      display: grid;
+      grid-auto-flow: column;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 0.2rem solid transparent;
+      padding: 0.4rem;
+
+      &:hover {
+        border-color: var(--action-color);
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+
+  .login {
+    margin-left: auto;
+  }
+</style>
+
+<header>
+  <nav>
+    <a href="https://www.w3.org/" class="logo-link">
+      <img
+        src="https://www.w3.org/assets/logos/w3c/w3c-no-bars.svg"
+        alt="W3C"
+      />
+    </a>
+    <button>Standards</button>
+    <button>Groups</button>
+    <button>Get involved</button>
+    <button>Resources</button>
+    <button>News &amp; events</button>
+    <button>About</button>
+    <a href="https://www.w3.org/help/search/" class="search">
+      <img
+        src="https://www.w3.org/assets/website-2021/svg/search.svg"
+        width="24"
+        height="24"
+        alt=""
+        aria-hidden="true"
+      />
+    </a>
+    <a href="https://auth.w3.org/?url=https://www.w3.org/" class="login">
+      Sign in<img
+        src="https://www.w3.org/assets/website-2021/svg/avatar.svg"
+        width="24"
+        height="24"
+        alt=""
+        aria-hidden="true"
+      />
+    </a>
+  </nav>
+</header>
 
 <script type="module" src="./slide.js"></script>

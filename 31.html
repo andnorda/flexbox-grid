@@ -1,0 +1,51 @@
+<meta charset="utf-8" />
+
+<style>
+  html {
+    height: 100%;
+    font-family: sans-serif;
+  }
+  body {
+    margin: 20px;
+    height: 100%;
+  }
+  form > * + * {
+    margin-top: 1rem;
+  }
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  input {
+    font: inherit;
+    max-width: 100%;
+  }
+  .post {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+</style>
+
+<form>
+  <div class="field">
+    <label for="phone">Telefonnummer</label>
+    <input type="text" id="phone" size="8" />
+  </div>
+  <div class="field">
+    <label for="fnr">Fødselsnummer</label>
+    <input type="text" id="fnr" size="11" />
+  </div>
+  <div class="post">
+    <div class="field">
+      <label for="postnr">Postnummer</label>
+      <input type="text" id="postnr" size="4" />
+    </div>
+    <div class="field">
+      <label for="poststed">Poststed</label>
+      <input type="text" id="poststed" />
+    </div>
+  </div>
+</form>
+
+<script type="module" src="./slide.js"></script>
