@@ -7,8 +7,8 @@ if (window.location.search.includes("back")) {
   });
 }
 
-const forwardKeys = ["PageDown", "ArrowRight", "ArrowDown"];
-const backwardKeys = ["PageUp", "ArrowLeft", "ArrowUp"];
+const forwardKeys = ["PageDown", "ArrowRight", "ArrowDown", " "];
+const backwardKeys = ["PageUp", "ArrowLeft", "ArrowUp", "Backspace"];
 
 window.addEventListener("keydown", (e) => {
   const current = Number(location.pathname.match(/(\d+)(\.html)?$/)?.[1] ?? 0);
@@ -31,5 +31,7 @@ window.addEventListener("keydown", (e) => {
       url.search = "back";
       window.location.href = url.toString();
     }
+  } else if (e.key === "0") {
+    window.location = "/";
   }
 });

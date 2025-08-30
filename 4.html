@@ -3,7 +3,7 @@
 <style>
   .flexbox > *,
   .grid > * {
-    border: 2px solid hotpink;
+    border: 2px solid papayawhip;
   }
 
   .flexbox {
@@ -15,18 +15,18 @@
 
 <h2>Flexbox</h2>
 <div class="flexbox">
-  <div>flex-direction og grid-auto-flow</div>
+  <div>grid-auto-flow og flex-direction</div>
   <div>gap</div>
   <div>align-items og justify-content</div>
-  <div>gridtemplatecolumns</div>
+  <div style="white-space: nowrap">grid-template-columns</div>
   <div>
     <a href="https://tailwindcss.com/docs/grid-template-columns" target="_blank"
       >repeat(3, minmax(0, 1fr))</a
     >
   </div>
-  <div>repeat(auto-fit, minmax(16ch, 1fr))</div>
+  <div>repeat(auto-fit, minmax(200px, 1fr))</div>
   <div>flex-wrap</div>
-  <div>> * { flex: 1 }</div>
+  <div>> * { flex-grow: 1; }</div>
 </div>
 
 <h2>Grid</h2>
@@ -34,15 +34,15 @@
   <div>flex-direction og grid-auto-flow</div>
   <div>gap</div>
   <div>align-items og justify-content</div>
-  <div>gridtemplatecolumns</div>
+  <div style="white-space: nowrap">grid-template-columns</div>
   <div>
     <a href="https://tailwindcss.com/docs/grid-template-columns" target="_blank"
       >repeat(3, minmax(0, 1fr))</a
     >
   </div>
-  <div>repeat(auto-fit, minmax(16ch, 1fr))</div>
+  <div>repeat(auto-fit, minmax(200px, 1fr))</div>
   <div>flex-wrap</div>
-  <div>> * { flex: 1 }</div>
+  <div>> * { flex-grow: 1; }</div>
 </div>
 
 <script type="module" src="./slide.js"></script>

@@ -11,8 +11,7 @@
       padding: 0.2em;
       font-size: 1.75rem;
       color: var(--color);
-      box-shadow: color-mix(in srgb, var(--color) 35%, transparent) 0 0 0 1px,
-        color-mix(in srgb, var(--color) 30%, transparent) 0 20px 25px -5px,
+      box-shadow: color-mix(in srgb, var(--color) 30%, transparent) 0 20px 25px -5px,
         color-mix(in srgb, var(--color) 30%, transparent) 0 8px 10px -6px;
       background: linear-gradient(
         to bottom right,
@@ -38,19 +37,19 @@
 
   .flexbox {
     display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+    gap: 2rem;
 
     > * {
-      flex: 1;
-      flex-basis: 22ch;
+      flex-grow: 1;
+      flex-basis: 0;
+      min-width: 0;
     }
   }
 
   .grid {
     display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(22ch, 1fr));
+    gap: 2rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 </style>
 
