@@ -7,7 +7,7 @@ if (window.location.search.includes("back")) {
   });
 }
 
-const forwardKeys = ["PageDown", "ArrowRight", "ArrowDown", " "];
+const forwardKeys = ["PageDown", "ArrowRight", "ArrowDown"];
 const backwardKeys = ["PageUp", "ArrowLeft", "ArrowUp", "Backspace"];
 
 window.addEventListener("keydown", (e) => {
