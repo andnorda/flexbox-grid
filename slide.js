@@ -7,8 +7,8 @@ if (window.location.search.includes("back")) {
   });
 }
 
-const forwardKeys = ["PageDown", "ArrowRight", "ArrowDown"];
-const backwardKeys = ["PageUp", "ArrowLeft", "ArrowUp", "Backspace"];
+const forwardKeys = ["PageDown", "ArrowDown"];
+const backwardKeys = ["PageUp", "ArrowUp"];
 
 window.addEventListener("keydown", (e) => {
   const current = Number(location.pathname.match(/(\d+)(\.html)?$/)?.[1] ?? 0);
