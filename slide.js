@@ -31,7 +31,5 @@ window.addEventListener("keydown", (e) => {
       url.search = "back";
       window.location.href = url.toString();
     }
-  } else if (e.key === "0") {
-    window.location = "/";
   }
 });
